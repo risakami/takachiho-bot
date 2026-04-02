@@ -3,8 +3,14 @@ from bs4 import BeautifulSoup
 
 url = "https://eipro.jp/takachiho1/eventCalendars/index"
 
-res = requests.get(url)
+headers = {
+    "User-Agent": "Mozilla/5.0"
+}
+
+res = requests.get(url, headers=headers)
 soup = BeautifulSoup(res.text, "html.parser")
 
-if "残" in soup.text:
-    print("残！")
+if "空き" in soup.text:
+    print("空きあり！")
+else:
+    print("空きなし")
