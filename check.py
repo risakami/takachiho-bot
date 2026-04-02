@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-url ="https://eipro.jp/takachiho1/eventCalendars"/index
+url ="https://eipro.jp/takachiho1/eventCalendars/index"
 
 headers = {
     "User-Agent": "Mozilla/5.0"
